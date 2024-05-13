@@ -14,7 +14,6 @@ export default class World {
     this.resources.on('groupEnd', (_group) => {
       if (_group.name === 'base') {
         //this.setDummy();
-        this.setEnvMap();
         this.setScene();
         this.createClouds();
       }
@@ -38,14 +37,6 @@ export default class World {
     this.scene.add(cube);
   }
 
-  setEnvMap() {
-    /* this.resources.items.envmap.mapping =
-      THREE.EquirectangularReflectionMapping;
-    this.scene.background = this.resources.items.envmap;
-    this.scene.backgroundIntensity = 0.1;
-    this.scene.environment = this.resources.items.envmap; */
-  }
-
   setScene() {
     const map = this.resources.items.scene.scene;
     map.traverse(function (child) {
@@ -62,7 +53,7 @@ export default class World {
 
   createClouds() {
     this.clouds = [];
-    for (let i = 0; i < 30; i++) {
+    for (let i = 0; i < 40; i++) {
       this.cloud = new Cloud();
       this.clouds.push(this.cloud);
     }

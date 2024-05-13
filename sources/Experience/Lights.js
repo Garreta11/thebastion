@@ -10,7 +10,8 @@ export default class Lights {
   }
 
   setLights() {
-    const light = new THREE.AmbientLight(0x404040, 1); // soft white light
+    // const light = new THREE.AmbientLight(0x404040, 1); // soft white light
+    const light = new THREE.AmbientLight(0xc4c4c4, 1); // soft white light
 
     this.scene.add(light);
 
